@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_8sdp"
+    android:clickable="false"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_3sdp">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8sdp">
+        
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageHikePoster"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="H, 2:1.6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_20sdp"
+            tools:src="@drawable/hike_1"
+            />
+        
+        <TextView
+            android:id="@+id/hikeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/imageHikePoster"
+            android:text="@string/hike_name"
+            />
+
+        <ImageView
+            android:id="@+id/hikeLocationImage"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_location"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/hikeName"
+            app:layout_constraintRight_toLeftOf="@id/hikeLocation"
+            />
+
+        <TextView
+            android:id="@+id/hikeLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/hike_location"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintLeft_toRightOf="@id/hikeLocationImage"
+            app:layout_constraintTop_toBottomOf="@id/hikeName" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutHikeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/hikeLocation">
+
+            <TextView
+                android:id="@+id/length"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/length"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                android:layout_weight="6"
+                app:layout_constraintLeft_toRightOf="@id/hikeInfoButton"
+                app:layout_constraintTop_toBottomOf="@id/hikeName" />
+
+            <TextView
+                android:id="@+id/hikeLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hike_length"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                android:layout_weight="6"
+                app:layout_constraintLeft_toRightOf="@id/hikeInfoButton"
+                app:layout_constraintTop_toBottomOf="@id/hikeName" />
+
+            <TextView
+                android:id="@+id/elevation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ascent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                android:layout_weight="6"
+                app:layout_constraintLeft_toRightOf="@id/hikeInfoButton"
+                app:layout_constraintTop_toBottomOf="@id/hikeName" />
+
+            <TextView
+                android:id="@+id/hikeElevation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hike_ascent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                android:layout_weight="6"
+                app:layout_constraintLeft_toRightOf="@id/hikeInfoButton"
+                app:layout_constraintTop_toBottomOf="@id/hikeName" />
+
+            <TextView
+                android:id="@+id/estTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="@string/estTime"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintLeft_toRightOf="@id/hikeInfoButton"
+                app:layout_constraintTop_toBottomOf="@id/hikeName" />
+
+            <TextView
+                android:id="@+id/hikeTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="@string/hike_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintLeft_toRightOf="@id/hikeInfoButton"
+                app:layout_constraintTop_toBottomOf="@id/hikeName" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/hikeInfoButton"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="4dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_info"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayoutHikeCard"
+            app:layout_constraintEnd_toEndOf="@+id/hikeName"
+            app:layout_constraintTop_toBottomOf="@+id/imageHikePoster"
+            app:layout_constraintVertical_bias="0.24" />
+
+        <TextView
+            android:id="@+id/hikeDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/date"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutHikeCard"
+            app:layout_constraintEnd_toStartOf="@id/hikeDate"/>
+
+        <TextView
+            android:id="@+id/hikeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/hike_date"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_8ssp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutHikeCard"
+            app:layout_constraintStart_toEndOf="@id/hikeDateText"/>
+
+        <RatingBar
+            android:id="@+id/hikeRatingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/hikeDate"
+            app:layout_constraintStart_toStartOf="parent"
+            android:isIndicator="true"
+            android:progressTint="@color/rating_stars"
+            android:secondaryProgressTint="@color/rating_stars"
+            tools:rating="4.5"
+            android:numStars="5"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

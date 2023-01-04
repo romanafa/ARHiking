@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_15sdp"
+    android:clickable="false"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_3sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageLibraryHikePoster"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="H, 2:1.6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_20sdp"
+            tools:layout_editor_absoluteX="-13dp"
+            tools:src="@drawable/hike_1" />
+
+        <TextView
+            android:id="@+id/libraryHikeNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/imageLibraryHikePoster"
+            android:text="@string/hike_name"
+            />
+
+        <ImageView
+            android:id="@+id/libraryHikeLocationImage"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_location"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/libraryHikeNameTextView"
+            app:layout_constraintRight_toLeftOf="@id/libraryHikeLocationTextView"
+            />
+
+        <TextView
+            android:id="@+id/libraryHikeLocationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/gps_dummy_string"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintLeft_toRightOf="@id/libraryHikeLocationImage"
+            app:layout_constraintTop_toBottomOf="@id/libraryHikeNameTextView" />
+
+        <LinearLayout
+            android:id="@+id/libraryHikeDateLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryHikeLocationImage">
+
+            <TextView
+                android:id="@+id/libraryDateDataTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hike_date"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryHikeDistanceLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryHikeDateLinearLayout">
+
+            <TextView
+                android:id="@+id/libraryDistanceTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/distance"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/libraryDistanceDataTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/gps_dummy_string"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="end"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryDurationLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryHikeDistanceLinearLayout">
+
+            <TextView
+                android:id="@+id/libraryDurationTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/libraryDurationDataTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/duration_dummy_string"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="end"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryAscentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryDurationLinearLayout">
+
+            <TextView
+                android:id="@+id/libraryAscentTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/total_ascent"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/libraryAscentDataTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sensors_dummy_string"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="end"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryElevationLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryAscentLinearLayout">
+
+            <TextView
+                android:id="@+id/libraryElevationTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/highest_elevation"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/libraryElevationDataTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sensors_dummy_string"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="start"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryDifficultyLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryElevationLinearLayout">
+
+            <TextView
+                android:id="@+id/libraryDifficultyTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/libraryDifficultyDataTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/input_dummy_string"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="start"
+                android:layout_weight="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryCategoryLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryDifficultyLinearLayout">
+
+            <TextView
+                android:id="@+id/libraryCategoryTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/libraryCategoryDataTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/input_dummy_string"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="start"
+                android:layout_weight="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryRatingLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryCategoryLinearLayout">
+
+            <TextView
+                android:id="@+id/libraryRatingTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/my_rating"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="start"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="2">
+
+                <RatingBar
+                    android:id="@+id/libraryHikeRatingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:progressTint="@color/rating_stars"
+                    android:secondaryProgressTint="@color/rating_stars"
+                    android:layout_gravity="left"
+                    android:numStars="5" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/libraryImageHolderLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libraryRatingLinearLayout">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/librarySmallImage1"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic"
+                android:layout_gravity="start"
+                app:riv_corner_radius="@dimen/_5sdp"
+                android:layout_weight="1"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/librarySmallImage2"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic"
+                android:layout_gravity="start"
+                app:riv_corner_radius="@dimen/_5sdp"
+                android:layout_weight="1"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/librarySmallImage3"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                app:riv_corner_radius="@dimen/_5sdp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic"
+                android:layout_gravity="start"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

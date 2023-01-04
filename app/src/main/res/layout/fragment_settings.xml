@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SettingsFragment">
+
+<!--    <TextView
+        android:id="@+id/appearanceTextView"
+        android:layout_width="278dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        android:text="@string/appearance"
+        android:textColor="@color/app_theme_color"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/themeTextView"
+        android:layout_width="385dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="64dp"
+        android:maxLines="1"
+        android:text="@string/theme_settings"
+        android:textColor="@color/app_theme_color"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/languageTextView"
+        android:layout_width="385dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="108dp"
+        android:maxLines="1"
+        android:text="@string/language"
+        android:textColor="@color/app_theme_color"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userDataTextView"
+        android:layout_width="385dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="152dp"
+        android:maxLines="1"
+        android:text="@string/user_data"
+        android:textColor="@color/app_theme_color"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/btnSwitchMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:checked="false"
+        app:layout_constraintEnd_toEndOf="@+id/themeTextView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/themeTextView"
+        app:layout_constraintTop_toTopOf="@+id/themeTextView" />-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

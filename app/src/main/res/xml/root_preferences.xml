@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="appearance_category"
+        android:title="@string/appearance"
+        android:icon="@drawable/ic_appearance_settings">
+
+        <SwitchPreferenceCompat
+            android:key="theme_settings"
+            android:title="@string/theme_settings"
+            android:summaryOn="@string/dark_theme"
+            android:summaryOff="@string/light_theme" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="language_category"
+        android:title="@string/language"
+        android:icon="@drawable/ic_language_settings">
+
+        <ListPreference android:key="language_settings"
+            android:defaultValue="@string/english"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            app:useSimpleSummaryProvider="true">
+
+        </ListPreference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="user_data_category"
+        android:title="@string/user_data"
+        android:icon="@drawable/ic_user_settings">
+
+        <Preference
+            app:key="user_data_pref"
+            app:title="Click to see user data and statistics"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="location_category"
+        android:title="@string/location"
+        android:icon="@drawable/ic_location_settings">
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="help_category"
+        android:icon="@drawable/ic_help_settings"
+        android:title="@string/help">
+
+        <Preference
+            app:key="feedback"
+            android:title="@string/feedback"
+            android:summary="@string/feedback_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

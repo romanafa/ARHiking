@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ArHiking</string>
+    <string name="title_home">Hjem</string>
+    <string name="Map">Kart</string>
+    <string name="user">Bruker</string>
+    <string name="newHike">Ny tur</string>
+    <string name="title_user">Bruker</string>
+    <string name="title_library">Mitt bibliotek</string>
+    <string name="title_register_hike">Registrer tur</string>
+    <string name="title_settings">Innstillinger</string>
+    <string name="title_map">Kart</string>
+    <string name="save">Lagre</string>
+    <string name="start_hike_button">Klikk her for å starte en tur!</string>
+    <string name="search">Søk</string>
+    <string name="my_rating">Min vurdering: </string>
+
+    <!-- Home fragment string -->
+    <string name="latest_hikes">SISTE TURER</string>
+    <string name="length">Lengde: </string>
+    <string name="ascent">Stigning: </string>
+    <string name="estTime">Beregnet tid: </string>
+    <string name="date">Turdato: </string>
+    <string name="browse_hike_library">Bla gjennom ditt bibliotek</string>
+    <string name="create_new_hike">Klikk på kartet for å planlegge din neste tur!</string>
+    <string name="activity_click_buttons">Velg kategori for å starte en ny aktivitet</string>
+    <string name="hike_button">Fjelltur</string>
+    <string name="bike_button">Sykling</string>
+    <string name="ski_button">Skitur</string>
+    <string name="other_button">Annen tur</string>
+
+    <!--Hardcoded data strings (temporary) -->
+    <string name="hike_name">BAKKANOSI</string>
+    <string name="hike_location">Jordalen, Voss, Norway</string>
+    <string name="hike_length">20km</string>
+    <string name="hike_ascent">580 - 1398m</string>
+    <string name="hike_time">8h</string>
+    <string name="hike_date">23.08.2022</string>
+    <string name="gps_dummy_string">Data kommer fra GPS</string>
+    <string name="duration_dummy_string">Data kommer fra tidtakeren</string>
+    <string name="sensors_dummy_string">Data kommer fra sensorer</string>
+    <string name="input_dummy_string">Data kommer fra brukerinput</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hei tomt fragment</string>
+    <string name="appInfo">Utviklet av Jørgen Breistrand Lampe, Romana Faiglova og Henrik Grevstad</string>
+
+    <!-- Settings strings -->
+    <string name="appearance">Utseende</string>
+    <string name="language">Språk</string>
+    <string name="user_data">Brukerdata</string>
+    <string name="location">Lokasjon</string>
+    <string name="theme_settings">Tema</string>
+    <string name="light_theme">Lystema er på</string>
+    <string name="dark_theme">Mørkt tema er på</string>
+    <string name="default_theme">Systemstandardtema er på</string>
+    <string name="english">Engelsk</string>
+    <string name="norwegian">Norsk</string>
+    <string name="help">Hjelp</string>
+    <string name="feedback">Send tilbakemelding</string>
+    <string name="feedback_summary">Rapporter tekniske problemer eller foreslå nye funksjoner</string>
+    <string name="no_hikes_yet">Ingen registrerte turer</string>
+    <string name="usage_statistics">Bruksstatistikk</string>
+    <string name="total_hikes">Totalt registrerte turer: </string>
+    <string name="hikes_chart_title">Månedlig aktivitet</string>
+    <string name="total_distance">Total avstand: </string>
+
+    <!-- New Hike fragment string -->
+    <string name="hike_completed">Gratulerer! Du har fullført turen.</string>
+    <string name="hike_name_tv">Tur navn: </string>
+    <string name="date_hint">Skriv inn dato</string>
+    <string name="name_hint">Skriv inn navn</string>
+    <string name="location_new_hike">Lokasjon: </string>
+    <string name="duration">Varighet: </string>
+    <string name="distance">Avstand: </string>
+    <string name="difficulty">Vanskelighetsgrad: </string>
+    <string name="total_ascent">Total stigning: </string>
+    <string name="highest_elevation">Høyde: </string>
+    <string name="easy">Lett</string>
+    <string name="moderate">Moderat</string>
+    <string name="hard">Vanskelig</string>
+    <string name="very_hard">Veldig krevende</string>
+    <string name="hikeSpeed">Fart:</string>
+    <string name="standing_still">Står stille...</string>
+    <string name="backToMap">Tilbake</string>
+    <string name="ar_hike_distance">\"tur distans: \"</string>
+    <string name="ar_distance_to_hike">\" km borte\"</string>
+    <string name="ar_difficulty">\"vanskelighetsgrad: \"</string>
+    <string name="category">Kategori</string>
+    <string name="ar_category">kategori: </string>
+
+    <!-- Fragment labels -->
+    <string name="completed_hike">Fullført tur</string>
+    <string name="user_data_fragment">Brukerdata</string>
+    <string name="camera">Kamera</string>
+</resources>

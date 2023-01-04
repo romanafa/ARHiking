@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.arhiking.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_library"
+            app:destination="@id/navigation_library" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_map"
+            app:destination="@id/navigation_map" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_register_hike"
+            app:destination="@id/navigation_register_hike" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.arhiking.fragments.MapFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/navigation_library"
+        android:name="com.example.arhiking.fragments.LibraryFragment"
+        android:label="@string/title_library"
+        tools:layout="@layout/fragment_library" />
+
+    <fragment
+        android:id="@+id/navigation_register_hike"
+        android:name="com.example.arhiking.fragments.RegisterHikeFragment"
+        android:label="@string/title_register_hike"
+        tools:layout="@layout/fragment_register_hike" >
+        <action
+            android:id="@+id/action_navigation_register_hike_to_completedHikeFragment"
+            app:destination="@id/completedHikeFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_navigation_register_hike_to_cameraFragment2"
+            app:destination="@id/cameraFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.arhiking.fragments.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_userDataFragment"
+            app:destination="@id/userDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chartsFragment"
+        android:name="com.example.arhiking.fragments.ChartsFragment"
+        android:label="fragment_charts"
+        tools:layout="@layout/fragment_charts" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.arhiking.fragments.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/acceleratorVisualizationFragment"
+        android:name="com.example.arhiking.fragments.AccelerometerVisualizationFragment"
+        android:label="fragment_accelerator_visualization"
+        tools:layout="@layout/fragment_accelerator_visualization" />
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.example.arhiking.fragments.UserDataFragment"
+        android:label="@string/user_data"
+        tools:layout="@layout/fragment_user_data" />
+    <fragment
+        android:id="@+id/completedHikeFragment"
+        android:name="com.example.arhiking.fragments.CompletedHikeFragment"
+        android:label="@string/completed_hike"
+        tools:layout="@layout/fragment_completed_hike" >
+        <action
+            android:id="@+id/action_completedHikeFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_completedHikeFragment_to_navigation_register_hike"
+            app:destination="@id/navigation_register_hike"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.arhiking.fragments.CameraFragment"
+        android:label="@string/camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_navigation_register_hike2"
+            app:destination="@id/navigation_register_hike" />
+    </fragment>
+</navigation>

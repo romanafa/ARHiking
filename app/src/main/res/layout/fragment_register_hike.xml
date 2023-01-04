@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.RegisterHikeFragment">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/registerHikeMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </org.osmdroid.views.MapView>
+
+    <ImageView
+        android:id="@+id/btnHike"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginTop="10sp"
+        android:layout_gravity="top|center"
+        android:src="@drawable/hike"
+        android:layout_marginBottom="65dp"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/btnSki"
+        android:layout_marginTop="10sp"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_gravity="top|center"
+        android:src="@drawable/ski"
+        android:layout_marginBottom="65dp"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/btnBike"
+        android:layout_marginTop="10sp"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_gravity="top|center"
+        android:src="@drawable/bike"
+        android:layout_marginBottom="65dp"
+        android:visibility="invisible"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imageViewDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@android:drawable/ic_delete"
+        android:layout_marginBottom="65dp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imageViewPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:src="@android:drawable/ic_media_play"
+        android:layout_marginBottom="65dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imageViewPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:src="@android:drawable/ic_media_pause"
+        android:layout_marginBottom="65dp"
+        android:layout_marginLeft="110dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imageViewStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@android:drawable/ic_menu_save"
+        android:layout_marginBottom="65dp"
+        android:layout_marginRight="110dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingBtnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tvMovementStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:text="@string/standing_still"/>
+
+
+</FrameLayout>

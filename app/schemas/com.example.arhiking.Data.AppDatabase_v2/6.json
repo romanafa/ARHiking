@@ -1,0 +1,414 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 6,
+    "identityHash": "3bc861d2c93c4ab2ad2cf4a31ce781a4",
+    "entities": [
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `first_name` TEXT, `last_name` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "first_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "last_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "uid"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Hike",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hikeId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `hike_name` TEXT, `hike_description` TEXT, `user_creator_id` INTEGER NOT NULL DEFAULT 0, `starting_point` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "hikeId",
+            "columnName": "hikeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hikeName",
+            "columnName": "hike_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hikeDescription",
+            "columnName": "hike_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userCreatorId",
+            "columnName": "user_creator_id",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "startingPoint",
+            "columnName": "starting_point",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "hikeId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Hike_Activity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hikeActivityId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `hike_activity_name` TEXT, `hike_activity_description` TEXT, `hike_id` INTEGER NOT NULL DEFAULT 0, `hike_distance` REAL NOT NULL DEFAULT 0, `hike_time_registered` INTEGER NOT NULL, `hike_time_end` INTEGER NOT NULL DEFAULT 0, `hike_duration` INTEGER NOT NULL DEFAULT 0, `hike_activity_starting_point` TEXT, `hike_activity_ending_point` TEXT, `hike_activity_highest_elevation` REAL NOT NULL DEFAULT 0, `hike_activity_ascent` REAL NOT NULL DEFAULT 0, `hike_activity_difficulty` TEXT, `hike_activity_category` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "hikeActivityId",
+            "columnName": "hikeActivityId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hikeActivityName",
+            "columnName": "hike_activity_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hikeActivityDescription",
+            "columnName": "hike_activity_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hike_id",
+            "columnName": "hike_id",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "hikeDistance",
+            "columnName": "hike_distance",
+            "affinity": "REAL",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "timeRegistered",
+            "columnName": "hike_time_registered",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeEnd",
+            "columnName": "hike_time_end",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "hike_duration",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "hikeActivityStartingPoint",
+            "columnName": "hike_activity_starting_point",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hikeActivityEndingPoint",
+            "columnName": "hike_activity_ending_point",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "highestElevation",
+            "columnName": "hike_activity_highest_elevation",
+            "affinity": "REAL",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "ascent",
+            "columnName": "hike_activity_ascent",
+            "affinity": "REAL",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "difficulty",
+            "columnName": "hike_activity_difficulty",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "hike_activity_category",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "hikeActivityId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "GyroscopeSensorData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gyroscopeSensorDataId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `hike_activity_id` INTEGER NOT NULL DEFAULT 0, `time_registered` INTEGER, `x_value` REAL, `y_value` REAL, `z_value` REAL)",
+        "fields": [
+          {
+            "fieldPath": "gyroscopeSensorDataId",
+            "columnName": "gyroscopeSensorDataId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hike_activity_id",
+            "columnName": "hike_activity_id",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "timeRegistered",
+            "columnName": "time_registered",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "xValue",
+            "columnName": "x_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "yValue",
+            "columnName": "y_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zValue",
+            "columnName": "z_value",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "gyroscopeSensorDataId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "AccelerometerData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`acceleromaterSensorDataId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `hike_activity_id` INTEGER NOT NULL DEFAULT 0, `time_registered` INTEGER, `x_value` REAL, `y_value` REAL, `z_value` REAL)",
+        "fields": [
+          {
+            "fieldPath": "acceleromaterSensorDataId",
+            "columnName": "acceleromaterSensorDataId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hike_activity_id",
+            "columnName": "hike_activity_id",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "timeRegistered",
+            "columnName": "time_registered",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "xValue",
+            "columnName": "x_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "yValue",
+            "columnName": "y_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zValue",
+            "columnName": "z_value",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "acceleromaterSensorDataId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "GeomagneticSensorData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`geomagneticSensorDataId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `hike_activity_id` INTEGER NOT NULL DEFAULT 0, `time_registered` INTEGER, `x_value` REAL, `y_value` REAL, `z_value` REAL)",
+        "fields": [
+          {
+            "fieldPath": "geomagneticSensorDataId",
+            "columnName": "geomagneticSensorDataId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hike_activity_id",
+            "columnName": "hike_activity_id",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "timeRegistered",
+            "columnName": "time_registered",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "xValue",
+            "columnName": "x_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "yValue",
+            "columnName": "y_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zValue",
+            "columnName": "z_value",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "geomagneticSensorDataId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "HikeGeoPoint",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hikeGeoPointId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `geoPoint` TEXT, `hike_id` INTEGER NOT NULL DEFAULT 0)",
+        "fields": [
+          {
+            "fieldPath": "hikeGeoPointId",
+            "columnName": "hikeGeoPointId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "geoPoint",
+            "columnName": "geoPoint",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hikeId",
+            "columnName": "hike_id",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "hikeGeoPointId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "HikeActivityGeoPoint",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hikeActivityGeoPointId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `geoPoint` TEXT, `hike_activity_id` INTEGER NOT NULL DEFAULT 0)",
+        "fields": [
+          {
+            "fieldPath": "hikeActivityGeoPointId",
+            "columnName": "hikeActivityGeoPointId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "geoPoint",
+            "columnName": "geoPoint",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hikeActivityId",
+            "columnName": "hike_activity_id",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "hikeActivityGeoPointId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3bc861d2c93c4ab2ad2cf4a31ce781a4')"
+    ]
+  }
+}
